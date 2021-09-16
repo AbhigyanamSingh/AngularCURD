@@ -1,0 +1,61 @@
+@import '../../../config.scss';
+
+/*  BEGIN BREADCRUMB HERE */
+
+.breadcrumb {
+    padding: 0px;
+    list-style: none;
+    margin: 5px 0 10px 0;
+}
+
+.breadcrumb>li {
+    display: inline-block;
+    color: #6e6e6e;
+    font-size: 12px;
+}
+
+.breadcrumb>li+li:before {
+    content: '\F054';
+    font: normal normal normal 12px/1 FontAwesome;
+    // color: #333333ba;
+    height: 34px;
+    right: 6px;
+    top: 8px;
+    pointer-events: none;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.breadcrumb>.active {
+    color: #959595;
+}
+
+.breadcrumb-active {
+    color: #191919 !important;
+}
+
+.breadcrumb-icon {
+    font-size: 18px;
+}
+
+.breadcrumb .fa {
+    text-align: left;
+    width: 18px;
+    vertical-align: baseline;
+}
+
+.back1 {
+    content: '\f053' !important;
+    font: normal normal normal 12px/1 FontAwesome;
+    color: #333333ba;
+    height: 34px;
+    right: 6px;
+    top: 8px;
+    pointer-events: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+
+}
+
+/* END BREADCRUMB HERE */

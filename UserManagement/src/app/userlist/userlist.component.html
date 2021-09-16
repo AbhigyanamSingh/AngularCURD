@@ -1,0 +1,59 @@
+<div class="fl-container" style="margin-top: 10px;">
+    <div class="col-sm-12">
+      <section class="">
+  
+      <h2 style="text-align: center;">List</h2>
+  <hr>
+  </section>
+    </div>
+    </div>
+    <div class="fl-container" style="margin-top: 50px;width: 80%;background-color: white;padding: 20px;padding-top:50px;">
+      <div class="col-sm-12">
+        <div class="col-sm-5">
+            <div style="min-height: 400px;background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+        </div>
+        <div class="col-sm-7">
+            <div class="col-sm-12">
+                <div class="col-sm-12">
+                <H3 style="text-align: center;">Welcome!</H3>
+                <p style="text-align: center;">
+                
+                Registered  Accounts. </p>
+                    </div>
+<div class="csv-table">
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let i of user_records;" style="    text-decoration: underline;">
+                <tr >
+                    <td>
+                        {{i.name}}
+                    </td>
+               
+                    <td>
+                        {{i.email}}
+                    </td>
+               
+                    <td>
+                        {{i.mobile}}
+                    </td>
+               
+                    <td>
+                        {{i.psw}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>

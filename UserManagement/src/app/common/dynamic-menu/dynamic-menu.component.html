@@ -1,0 +1,83 @@
+<div class="dynamic_header">
+  <div class="page-header" id="header">
+    <h2 class="header-title">{{companyName}}</h2>
+
+
+    <div class="hide-small">
+
+
+      <div class="header-actions" md2-menu>
+
+        <mat-menu #appMenu="matMenu">
+
+
+          <a mat-menu-item *ngIf="is_loggin" (click)="logout()">
+            <i class="fa fa-sign-out menu-fa"></i>Logout
+          </a>
+        </mat-menu>
+
+
+
+        <div class="usermail">
+          <button mat-icon-button [matMenuTriggerFor]="appMenu" class="user_button">
+            <p class="username ">{{userName}}</p>
+            <p class="usercode">{{userCode}}</p>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="menu-div show-small" md2-menu>
+
+      <i class="fa fa-bars" *ngIf="!isMenuIconOpened" (click)="openMenuNav()"></i>
+      <i class="fa fa-times" *ngIf="isMenuIconOpened" (click)="closeMenuNav()"></i>
+
+    </div>
+  </div>
+
+  <nav class="main-menu" id="mySidenav" (mouseover)="openNav()" (mouseleave)="closeNav()">
+    <div class="toolbar-logo">
+      <li (click)="goHome();">
+        <img src="./favicon.ico" class="big-logo" *ngIf="isclosed">
+        <img class="animated fadeInUp" src="./favicon.ico" class="" *ngIf="!isclosed" />
+        <span class="nav-text">
+        </span>
+      </li>
+    </div>
+    <ul class="menu-ul">
+      <li *ngFor="let m of menuList;let i = index" (click)="navigate(m.aurl,m.menuitemname,true,m.project)"
+        [ngStyle]="{'background-color': m.activemenu ? 'rgba(85, 127, 150, 0.38)' : 'transparent' }">
+        <a (click)="showMenuList(i)">
+          <img src="./favicon.ico" class="menu-img" />
+          <span class="nav-text">
+            {{m.menuitemname}}
+          </span>
+          <i class="fa {{m.show ? 'fa-angle-down' : 'fa-angle-right'}} arrow-icon" *ngIf="m.submenu"></i>
+        </a>
+        <ul class="sublist-ul {{m.show ? 'active' : ''}}" *ngIf="m.show">
+          <li *ngFor="let x of m.submenu" (click)="navigate(x.aurl,m.menuitemname,false,x.project)"
+            [ngStyle]="{'background-color': x.activemenu ? '#557f96a6' : 'transparent' }">
+            <a>
+              <span class="nav-text">
+                {{x.menuitemname}}
+              </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </ul>
+
+  </nav>
+
+
+
+  <div id="menuNav" class="menunav">
+    <p (click)="logout()" *ngIf="is_loggin">Logout</p>
+  </div>
+
+
+</div>

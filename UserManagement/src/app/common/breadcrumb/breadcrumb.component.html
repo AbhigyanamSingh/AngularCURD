@@ -1,0 +1,8 @@
+<div id="breadcrumb" class="col s12 col m12 col l12 no-padding">
+  <ul class="breadcrumb">
+    <li><a><em class="fa fa-home breadcrumb-icon"></em></a></li> 
+    <li *ngFor="let crumb of breadCrumbList;let last=last" [ngClass]="{'breadcrumb-active':last}">{{crumb}}</li>
+    <!-- <li class="back1 pull-right" (click)="back1();"></li>  -->
+  </ul>
+
+</div>

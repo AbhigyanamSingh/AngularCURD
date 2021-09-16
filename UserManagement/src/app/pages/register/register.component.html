@@ -1,0 +1,67 @@
+<div class="fl-container" style="margin-top: 10px;">
+  <div class="col-sm-12">
+    <section class="">
+
+    <h2 style="text-align: center;">Register</h2>
+<hr>
+</section>
+  </div>
+  </div>
+  <div class="fl-container" style="margin-top: 50px;width: 80%;background-color: white;padding: 20px;padding-top:50px;">
+    <div class="col-sm-12">
+      <div class="col-sm-5">
+          <div style="min-height: 400px;background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+      </div>
+      <div class="col-sm-7">
+          <div class="col-sm-12">
+              <div class="col-sm-12">
+              <H3 style="text-align: center;">Welcome!</H3>
+              <p style="text-align: center;">
+              
+             Please Register  your account. </p>
+                  </div>
+<div class="col-sm-12" style="padding-left: 30px;">
+  <small>Name</small>
+
+  <mat-form-field class="full-width">
+    <input matInput title="Name" id="user_name" appNumberCharacter="true" [(ngModel)]="user_name">
+</mat-form-field>
+</div>
+<div class="col-sm-12" style="padding-left: 30px;">
+  <small>Email</small>
+
+  <mat-form-field class="full-width">
+    <input matInput type="email" title="Email" appEmailValidation id="user_email" [(ngModel)]="user_email">
+</mat-form-field>
+</div>
+<div class="col-sm-12" style="padding-left: 30px;">
+  <small>Mobile</small>
+
+  <mat-form-field class="full-width">
+    <input matInput  title="Mobile" maxlength="10" appInteger id="user_mobile" [(ngModel)]="user_mobile">
+</mat-form-field>
+</div>
+<div class="col-sm-12" style="padding-left: 30px;">
+  <small>Password</small>
+
+  <mat-form-field class="full-width">
+    <input matInput type="password" title="Password" id="user_psw" [(ngModel)]="user_psw">
+</mat-form-field>
+</div>
+<div class="col-sm-12">
+  <div class="col-sm-5"></div>
+  <div class="col-sm-2">
+    <button class="btn" mat-icon-button (click)="saveData()">Save</button>
+
+    <app-api-progressing *ngIf="api_progressing.is_save_api"></app-api-progressing>
+
+  </div>
+  <div class="col-sm-5"></div>
+
+  </div>
+     
+         </div>
+        </div>
+</div>
+</div>
+        
